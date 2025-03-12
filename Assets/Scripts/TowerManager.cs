@@ -28,7 +28,7 @@ public class TowerManager : MonoBehaviour
     private IEnumerator TowerFallCoroutine()
     {
         Vector3 targetPosition = tower.transform.position + new Vector3(0, -1.5f, 0);
-        float duration = 1.5f;
+        float duration = 0.5f;
         float timePassed = 0f;
 
         while (timePassed < duration)

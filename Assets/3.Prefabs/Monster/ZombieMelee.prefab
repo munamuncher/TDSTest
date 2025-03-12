@@ -97,12 +97,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4899b19634dfe14ea366c973426200e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   monsterMoveSpeed: 2
   attackRange: 0.1
   vertical: 1
   isClimbing: 0
   isLadder: 0
+  isAttacking: 0
   ladder: {fileID: 9086574683746493607}
+  health: 1000
 --- !u!70 &2966459875289920552
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -444,7 +447,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1339ea4d894944629ae252d2a9b41530, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -560,7 +563,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 14b1842eada7b4da6928e01ac3e9008c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

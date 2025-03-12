@@ -14,7 +14,7 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Monster"))
+        if (collision.gameObject.CompareTag("Monster"))
         {
             if (collision.gameObject.TryGetComponent<IDamageable>(out dmg))
             {
@@ -22,5 +22,9 @@ public class BulletMovement : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if(collision.gameObject.CompareTag("Floor"))
+        {
+            Destroy(gameObject);
+        }    
     }
 }

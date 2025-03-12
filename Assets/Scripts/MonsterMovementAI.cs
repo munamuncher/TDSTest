@@ -15,6 +15,10 @@ public enum AIState
 [RequireComponent(typeof(Rigidbody2D))]
 public class MonsterMovementAI : MonoBehaviour , IDamageable
 {
+    private SpriteRenderer[] bodyPartRenderers; 
+    private Color originalColor;
+
+
     private CapsuleCollider2D ccd;
     private Rigidbody2D rb;
     private Animator anim;
@@ -46,8 +50,6 @@ public class MonsterMovementAI : MonoBehaviour , IDamageable
     [SerializeField]
     private int health = 100;
 
-
-
     private AIState currentState;
 
     void Start()
@@ -64,9 +66,19 @@ public class MonsterMovementAI : MonoBehaviour , IDamageable
         }
         if(!TryGetComponent<Animator>(out anim))
         {
-            Debug.LogWarning("animatior 참조 실패 -  monstermovementAI.cs - Awake()");
+            Debug.LogWarning("animatior 참조 실패 -  MonsterMovementAI.cs - Awake()");
         }
         MonsterStateController(AIState.Move);
+
+        bodyPartRenderers = GetComponentsInChildren<SpriteRenderer>();
+        if(bodyPartRenderers == null)
+        {
+            Debug.LogWarning("Body parts 참조 실패 - MonsterMovementAI.cs - Awake()");
+        }
+        if (bodyPartRenderers.Length > 0)
+        {
+            originalColor = bodyPartRenderers[0].color;
+        }
     }
 
     private void Update()
@@ -224,10 +236,24 @@ public class MonsterMovementAI : MonoBehaviour , IDamageable
     public void Damage(int amount)
     {
         health -= amount;
+        StartCoroutine(BlinkEffect());
         if (health < 0)
         {
             MonsterStateController(AIState.Die);
             Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator BlinkEffect()
+    {
+        foreach (var renderer in bodyPartRenderers)
+        {
+            renderer.color = Color.red;
+        }
+        yield return new WaitForSeconds(0.3f);
+        foreach (var renderer in bodyPartRenderers)
+        {
+            renderer.color = originalColor;
         }
     }
 }
