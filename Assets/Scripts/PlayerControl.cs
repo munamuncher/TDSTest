@@ -16,7 +16,8 @@ public class PlayerControl : MonoBehaviour , IDamageable
     public GameObject nearTarget;
     private float nearestDistance = float.MaxValue;
     public GameObject target { get; set; }
-
+    [SerializeField]
+    private GameObject invisWall;
     [SerializeField]
     private GameObject gun;
     [SerializeField]
@@ -71,7 +72,7 @@ public class PlayerControl : MonoBehaviour , IDamageable
             if (target != null && target.activeInHierarchy)
             {
                 GameObject obj = Instantiate(bullet, muzzle.transform.position,muzzle.transform.rotation);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(1f);
             }
             else
             {
@@ -111,6 +112,7 @@ public class PlayerControl : MonoBehaviour , IDamageable
         health -= amount;
         if (health < 0)
         {
+            Destroy(invisWall);
             Destroy(gameObject);
         }
     }

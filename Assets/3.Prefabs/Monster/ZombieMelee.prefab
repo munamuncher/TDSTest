@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6314705635941899560}
   - component: {fileID: 5256117404189825063}
   - component: {fileID: 2966459875289920552}
+  - component: {fileID: 4481118880612632609}
   m_Layer: 7
   m_Name: ZombieMelee
   m_TagString: Monster
@@ -139,8 +140,20 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.15, y: 0.56}
-  m_Size: {x: 0.45, y: 1}
+  m_Size: {x: 0.4, y: 1}
   m_Direction: 0
+--- !u!210 &4481118880612632609
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319310827380095937}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2094693183665648150
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +919,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.06}
+  m_Offset: {x: 0, y: 0.005}
   m_Size: {x: 0.1, y: 1.1}
   m_Direction: 0

@@ -306,9 +306,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -574,9 +574,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -842,9 +842,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1460,9 +1460,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1594,7 +1594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 988428232}
-  - component: {fileID: 988428234}
+  - component: {fileID: 988428233}
   m_Layer: 0
   m_Name: BoxTrans
   m_TagString: Untagged
@@ -1623,7 +1623,7 @@ Transform:
   - {fileID: 1544987789}
   m_Father: {fileID: 1489341059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &988428234
+--- !u!61 &988428233
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1655,7 +1655,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1, y: 3.86}
+  m_Offset: {x: 1.02, y: 3.83}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1666,7 +1666,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 7.49}
+  m_Size: {x: 0.1, y: 7.66}
   m_EdgeRadius: 0
 --- !u!1 &1031307513
 GameObject:
@@ -2222,10 +2222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allObjects: []
   nearTarget: {fileID: 0}
+  invisWall: {fileID: 988428231}
   gun: {fileID: 120640812}
   muzzle: {fileID: 1252247852}
   bullet: {fileID: 6106874778087166122, guid: 4eb0b6d30f3092d479703f7951fbffcb, type: 3}
-  health: 0
+  health: 100
 --- !u!1 &1677295388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,9 +2594,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 100
   m_LinearDrag: 0
-  m_AngularDrag: 10
+  m_AngularDrag: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
